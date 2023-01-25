@@ -1,15 +1,40 @@
-{% extends 'paginas/modelo.html'}
+{% extends 'paginas/modelo.html' %}
 
-{% load staic %}
+{% load static %}
 
 {% block menu %}
 <h3>Lista de Campus registrados</h3>
 <hr>
-<table>
+<div class="table-responsive">
+<table class="table table text-white">
     <tr>
-        <th>Nome</th>
+        <th>Numero</th>
         <th>Descrição</th>
+        <th>Pontos</th>
+        <th>Detalhes</th>
         <th>Ações</th>
     </tr>
+    {% for atividade in object_list %}
+    <tr>
+      
+        <td>{{ atividade.numero }}</td>
+        <td>{{ atividade.descricao }}</td>
+        <td>{{ atividade.pontos }}</td>
+        <td>{{ atividade.detalhes }}</td>
+            <td>
+                <a href="{% url 'editar-atividade' atividade.pk %}"class="btn btn-warning btn-sm"title="Editar">Editar</a>
+                <a href="{% url 'excluir-atividade' atividade.pk %}"class="btn btn-danger btn-sm" title="Excluir">Excluir</a>
+            </td>
+    </tr>
+
+    {% empty %}
+    <tr>
+        <td colspan="3">Nenhum campo registrado.</td>
+    </tr>
+
+    {% endfor %}
+
 </table>
+
+</div>
 {% endblock %}

@@ -6,7 +6,7 @@
 <h3>Lista de Campus registrados</h3>
 <hr>
 <div class="table-responsive">
-<table class="table table-bordered text-white">
+<table class="table table text-white">
     <tr>
         <th>ID</th>
         <th>Nome</th>
@@ -19,8 +19,8 @@
         <td>{{ campo.nome }}</td>
         <td>{{ campo.descricao }}</td>
             <td>
-                Editar
-                excluir
+                <a href="{% url 'editar-campo' campo.pk %}"class="btn btn-warning btn-sm"title="Editar">Editar</a>
+                <a href="{% url 'excluir-campo' campo.pk %}"class="btn btn-danger btn-sm" title="Excluir">Excluir</a>
             </td>
     </tr>
 

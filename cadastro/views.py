@@ -8,7 +8,7 @@ class CampuCreate(CreateView):
     model = Campu
     fields = ['nome', 'descricao']
     template_name = 'cadastro/form.html'
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('listar-campo')
 
 
 class AtividadeCreate(CreateView):
@@ -25,7 +25,7 @@ class CampuUpdate(UpdateView):
     model = Campu
     fields = ['nome', 'descricao']
     template_name = 'cadastro/form.html'
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('listar-campo')
 
 class AtividadeUpdate(UpdateView):
     model = Atividade
@@ -39,12 +39,12 @@ class AtividadeUpdate(UpdateView):
 class CampuDelete(DeleteView):
     model = Campu
     template_name = 'cadastro/form-excluir.html'
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('listar-campo')
 
 class AtividadeDelete(DeleteView):
     model = Atividade
     template_name = 'cadastro/form-excluir.html'
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('listar-campo')
 
 ################# List ################
 
