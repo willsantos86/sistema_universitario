@@ -18,4 +18,4 @@ urlpatterns = [
     path('listar/campo/', CampuList.as_view(), name='listar-campo'),
     path('listar/atividade/', AtividadeList.as_view(), name='listar-atividade'),
     
-]
+]   
