@@ -25,21 +25,21 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Cadastro
+                Cadastrar
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Campus</a></li>
-                <li><a class="dropdown-item" href="#">Atividade</a></li>
+                <li><a class="dropdown-item" href="{% url 'cadastro:cadastrar-campo' %}">Campus</a></li>
+                <li><a class="dropdown-item" href="{% url 'cadastro:cadastrar-atividade' %}">Atividade</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Visualização
+                  Visualizar
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Lista Campus</a></li>
-                    <li><a class="dropdown-item" href="#">Lista Atividades</a></li>
-                </ul>
+                  <li><a class="dropdown-item" href="{% url 'cadastro:listar-campo' %}">Lista Campus</a></li>
+                  <li><a class="dropdown-item" href="{% url 'cadastro:listar-atividade' %}">Lista Atividades</a></li>
+              </ul>
               </li>
           </ul>
         </div>

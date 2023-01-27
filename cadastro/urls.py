@@ -4,6 +4,7 @@ from .views import CampuUpdate, AtividadeUpdate
 from .views import CampuDelete, AtividadeDelete
 from .views import CampuList, AtividadeList
 
+app_name = 'cadastro'
 
 urlpatterns = [
     path('cadastrar/campo/', CampuCreate.as_view(), name='cadastrar-campo'),
@@ -18,4 +19,4 @@ urlpatterns = [
     path('listar/campo/', CampuList.as_view(), name='listar-campo'),
     path('listar/atividade/', AtividadeList.as_view(), name='listar-atividade'),
     
-]   
+]       

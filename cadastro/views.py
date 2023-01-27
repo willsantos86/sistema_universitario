@@ -31,7 +31,7 @@ class AtividadeUpdate(UpdateView):
     model = Atividade
     fields = ['numero','descricao','pontos', 'detalhes', 'campo']
     template_name ='cadastro/form.html'
-    success_url = reverse_lazy ('index')   
+    success_url = reverse_lazy ('listar-atividade')   
 
 
 ################# Delete ################
